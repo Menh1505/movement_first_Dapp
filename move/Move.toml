@@ -11,7 +11,7 @@ onchain_bio_addr = "d93b6d3ac8750605fe60defc356dfb037f3b677a9e261cfd16d1e85dda87
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "mainnet"
+rev = "testnet"
 subdir = "aptos-move/framework/aptos-framework"
 
 [dev-dependencies]

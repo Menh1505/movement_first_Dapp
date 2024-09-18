@@ -67,6 +67,7 @@ function App() {
         // sign and submit transaction to chain
         const response = await signAndSubmitTransaction(transaction);
         // wait for transaction
+        console.log(response);
         console.log(`Success! View your transaction at https://explorer.movementlabs.xyz/txn/${response.hash}`)
         await aptos.waitForTransaction({transactionHash:response.hash});
         fetchBio();
@@ -87,7 +88,13 @@ function App() {
       <div className="center-container">
         
         <div className="row">
-          <h1>You Onchain Bio</h1>
+          <h1>Your Onchain Bio</h1>
+        </div>
+        <div className="row">
+          <h1>Your contract address: {ONCHAIN_BIO}</h1>
+        </div>
+        <div className="row">
+          <h1>Your account address: {account?.address}</h1>
         </div>
 
         <div className="row">
